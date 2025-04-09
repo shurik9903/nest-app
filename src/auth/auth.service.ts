@@ -69,7 +69,7 @@ export class AuthService {
     response.cookie('Authentication', accessToken, {
       // Только для http
       httpOnly: true,
-      // Только в режиме production (no devolepment)
+      // (HTTPS защищенное соединение) Только в режиме production (no devolepment)
       secure: this.configService.get('NODE_ENV') === 'production',
       // Дата окончания
       expires: expiresAccessToken,
@@ -79,7 +79,7 @@ export class AuthService {
     response.cookie('Refresh', refreshToken, {
       // Только для http
       httpOnly: true,
-      // Только в режиме production (no devolepment)
+      // (HTTPS защищенное соединение) Только в режиме production (no devolepment)
       secure: this.configService.get('NODE_ENV') === 'production',
       // Дата окончания
       expires: expiresRefreshToken,

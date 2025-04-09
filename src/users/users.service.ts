@@ -1,5 +1,6 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { hash } from 'bcryptjs';
+import { eq } from 'drizzle-orm';
 import { DRIZZLE } from 'src/drizzle/drizzle.module';
 import { User } from 'src/drizzle/schema/user.schema';
 import { DrizzleDB } from 'src/drizzle/types/drizzle';
@@ -55,6 +56,7 @@ export class UsersService {
       .set({
         refreshToken: token,
       })
+      .where(eq(User.id, id))
       .returning();
 
     if (!user[0]) {

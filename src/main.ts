@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import * as cookieParser from 'cookie-parser';
+// import * as cookieParser from 'cookie-parser'; NestJS v9.4.x+
 
 // Стартовый файл сервер-приложения bootstrap
 

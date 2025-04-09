@@ -23,7 +23,6 @@ import { UsersModule } from './users/users.module';
     // isGlobal - Если «True», регистрирует ConfigModule как глобальный модуль.
     AuthModule,
     UsersModule,
-    AuthModule,
   ],
   controllers: [AppController], // Указание контроллеров связанных с этим модулем
   providers: [

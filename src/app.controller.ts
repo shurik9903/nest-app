@@ -20,6 +20,11 @@ export class AppController {
   ) {}
 
   // @Get - REST API Get запрос по указаному пути
+  // @Param - получение данных из пути запроса
+  // localhost:3000/api/v1/1, id = 1
+  // @Query - получение данных из параметров запроса
+  // localhost:3000/api/v1/get?age=10
+  // @Query('age') age: number = 10
   @Get('get/:id')
   getHello(
     // @Param(имя, тип для преобразования) - Параметр пути с указаным именем с преобразованием одних данных к другим
